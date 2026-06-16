@@ -1,0 +1,368 @@
+/* =====================================
+LPK SAKANG MEDAN SUMATERA UTARA
+STYLE.CSS - FINAL MODERN VERSION
+===================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+:root{
+--biru-tua:#0B3D91;
+--biru-muda:#4DB8FF;
+--merah:#E31E24;
+--putih:#FFFFFF;
+--abu:#F5F7FA;
+--shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#333;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* ================= HEADER ================= */
+header{
+background:var(--biru-tua);
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.logo img{
+height:70px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+transition:0.3s;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:var(--biru-muda);
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--biru-muda);
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* ================= BUTTON ================= */
+.btn-wa{
+background:var(--biru-muda);
+color:white;
+text-decoration:none;
+padding:10px 20px;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(77,184,255,0.3);
+}
+
+.btn-wa:hover{
+transform:translateY(-2px);
+background:#2aa7ff;
+}
+
+.btn-merah{
+display:inline-block;
+margin-top:20px;
+background:var(--merah);
+color:white;
+text-decoration:none;
+padding:15px 35px;
+border-radius:40px;
+font-weight:700;
+transition:0.3s;
+box-shadow:0 10px 20px rgba(227,30,36,0.3);
+}
+
+.btn-merah:hover{
+transform:translateY(-3px);
+background:#c8141a;
+}
+
+/* ================= HERO ================= */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(11,61,145,.80),rgba(11,61,145,.80)),
+url('images/banner.jfif');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+color:white;
+}
+
+.hero-content{
+width:90%;
+max-width:900px;
+}
+
+.hero h1{
+font-size:58px;
+font-weight:800;
+margin-bottom:20px;
+animation:fadeIn 1s ease-in-out;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:15px;
+opacity:0.95;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* ================= SECTION ================= */
+section{
+padding:80px 0;
+}
+
+.judul{
+text-align:center;
+color:var(--biru-tua);
+margin-bottom:40px;
+font-size:38px;
+font-weight:800;
+}
+
+/* ================= ABOUT ================= */
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-img img{
+width:100%;
+border-radius:15px;
+box-shadow:var(--shadow);
+transition:0.3s;
+}
+
+.about-img img:hover{
+transform:scale(1.03);
+}
+
+.about-text h3{
+color:var(--biru-tua);
+margin-bottom:15px;
+}
+
+.about-text p{
+margin-bottom:15px;
+}
+
+/* ================= PROGRAM ================= */
+#program{
+background:var(--abu);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:var(--shadow);
+transition:0.3s;
+border-top:4px solid var(--biru-muda);
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:var(--biru-tua);
+margin-bottom:10px;
+}
+
+/* ================= STATS ================= */
+.stats{
+background:var(--biru-tua);
+color:white;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+text-align:center;
+padding:60px 20px;
+}
+
+.stat h1{
+color:var(--biru-muda);
+font-size:50px;
+}
+
+.stat p{
+font-size:18px;
+}
+
+/* ================= GALLERY (MODERN UPGRADE) ================= */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.galeri-item{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:0.3s;
+position:relative;
+}
+
+.galeri-item:hover{
+transform:translateY(-6px);
+}
+
+.gallery img{
+width:100%;
+height:240px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.galeri-item:hover img{
+transform:scale(1.08);
+filter:brightness(0.9);
+}
+
+.gallery p{
+padding:12px;
+font-weight:600;
+color:#333;
+}
+
+/* badge kecil LPK */
+.galeri-item::before{
+content:"LPK SAKANG";
+position:absolute;
+top:10px;
+left:10px;
+background:rgba(227,30,36,0.85);
+color:white;
+font-size:10px;
+padding:4px 8px;
+border-radius:5px;
+font-weight:bold;
+}
+
+/* ================= VISI TEXT ================= */
+.visi-text{
+text-align:center;
+max-width:900px;
+margin:auto;
+font-size:18px;
+color:#555;
+}
+
+/* ================= CONTACT ================= */
+.contact-box{
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:var(--shadow);
+}
+
+.contact-box h3{
+color:var(--biru-tua);
+margin-bottom:15px;
+}
+
+.contact-box p{
+margin-bottom:10px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+background:var(--biru-tua);
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+footer p{
+margin:8px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+}
